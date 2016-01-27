@@ -57,10 +57,13 @@ public class Ninja extends VisibleGameObject{
 
     private float jumpVelocityY = 0;
 
+    // velocity in x direction while jumping
     private final float jumpVelocityX = 280.0f;
 
-    private final float jumpMomentum = -340.0f;
+    // initial momentum given at the start of jump
+    private final float jumpMomentum = -360.0f;
 
+    // velocity when starts to slide
     private final float initialSlideVelocity = 400.0f;
 
     private float slideVelocity = 0;
@@ -68,7 +71,7 @@ public class Ninja extends VisibleGameObject{
     private boolean runAfterLanding = false;
 
     // gravitational constant
-    private final float gravity = 850.0f;
+    private final float gravity = 900.0f;
 
     // to stop ninja after sliding
     private final float friction = 11.0f;
@@ -370,7 +373,7 @@ public class Ninja extends VisibleGameObject{
             }
 
             if (ninjaState == NinjaState.Jump) {
-                spriteLengthInMilliseconds = 70;
+                spriteLengthInMilliseconds = 80;
             }
 
             if (ninjaState == NinjaState.Slide) {
